@@ -22,3 +22,7 @@ log_test.py
 bacnet_notebook.ipynb
 
 - A Jupyter Notebook with a basic implementation of a BAC0 connection with four devices.
+
+imlwp_1.py
+
+- My first kick at getting through Introduction to Machine Learning with Python by Müller and Guido
