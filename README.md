@@ -23,6 +23,7 @@ bacnet_notebook.ipynb
 
 - A Jupyter Notebook with a basic implementation of a BAC0 connection with four devices.
 
-imlwp_1.py
+imlwp_1.py, .ipynb
 
 - My first kick at getting through Introduction to Machine Learning with Python by Müller and Guido
+- The Jupyter Notebook version lets one see the plots - my first time getting this working
