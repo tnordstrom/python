@@ -5,7 +5,7 @@ This repository contains several projects that I completed using python.
 
 MusicPlayer.py
 
-- A tkinter app used to populate a database with a music file directory tree, allows for music collection navigation and play.
+- A tkinter app used to populate a database with a music file directory tree, allows for music collection navigation and playing.
 
 SpeedTypingTest.py
 
