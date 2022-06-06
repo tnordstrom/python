@@ -26,4 +26,4 @@ bacnet_notebook.ipynb
 imlwp_1.py, .ipynb
 
 - My first kick at getting through Introduction to Machine Learning with Python by Müller and Guido
-- The Jupyter Notebook version lets one see the plots - my first time getting this working
+- The Jupyter Notebook version lets one see the plots
