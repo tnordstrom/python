@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ playlist_name }}</title>
+</head>
+<body>
+    <p><a href="{% url 'index' %}">&larr; Back to Playlists</a></p>
+    <h1>{{ playlist_name }}</h1>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% elif tracks %}
+        <ol style="list-style: none; padding: 0;">
+        {% for track in tracks %}
+            <li style="margin-bottom: 12px;">
+                <iframe
+                    src="https://open.spotify.com/embed/track/{{ track.id }}"
+                    width="380"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy">
+                </iframe>
+            </li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>This playlist has no tracks.</p>
+    {% endif %}
+</body>
+</html>

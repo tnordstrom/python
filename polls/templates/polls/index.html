@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music by Django</title>
+</head>
+<body>
+<h1>{{ heading }}</h1>
+
+    {% if is_logged_in %}
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+
+        <h2>Saved Tracks</h2>
+        <ul>
+            <li><a href="{% url 'liked_songs' %}">&#9829; Liked Songs</a></li>
+        </ul>
+
+        <h2>Saved Albums</h2>
+        {% if albums %}
+            <ol>
+            {% for album in albums %}
+                <li>
+                    <a href="{% url 'album_detail' album.id %}">{{ album.name }}</a> &mdash; {{ album.artists }}
+                </li>
+            {% endfor %}
+            </ol>
+        {% else %}
+            <p>No saved albums found.</p>
+        {% endif %}
+
+        <h2>Playlists</h2>
+        {% if playlists %}
+            <ul>
+            {% for playlist in playlists %}
+                <li>
+                    <a href="{% url 'playlist_detail' playlist.id %}">{{ playlist.name }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No playlists found.</p>
+        {% endif %}
+    {% else %}
+        <p>You are currently logged out.</p>
+        <a href="{{ auth_url }}">Log in with Spotify</a>
+    {% endif %}
+</body>
+</html>
